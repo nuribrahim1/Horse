@@ -1,7 +1,8 @@
 import random
 import pygame
 
-
+n = open("namelist.txt","r")
+nameList = n.read().split("\n")
 
 def draw_game():
     bg = (17,124,19)

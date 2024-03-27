@@ -3,7 +3,7 @@ from random import randint
 
 
 print("Hello welcome to Super Stables")
-nameList = ["a","b","c","d","e","f","g"]
+
 
 def newbet():
 
