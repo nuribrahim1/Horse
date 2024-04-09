@@ -1,19 +1,8 @@
 import random
-import pygame
+from Game import *
 
-n = open("namelist.txt","r")
+n = open("namelist.txt", "r")
 nameList = n.read().split("\n")
-
-def draw_game():
-    bg = (17,124,19)
-    grid = (255,255,255)
-    screen_height = 280
-    screen_width = 560
-    screen = pygame.display.set_mode((screen_width, screen_height))
-    screen.fill(bg)
-    pygame.draw.line(screen,grid,(140,100),(140,240),5)
-    for y in range(120,240,20):
-        pygame.draw.line(screen,grid,(70,y),(480,y),5)
 
 class horse():
     def __init__(self,name,speed,y_value,colour):
@@ -39,9 +28,6 @@ class race():
 
     def begin(self):
         pygame.init()
-        screen_height = 280
-        screen_width = 560
-        screen = pygame.display.set_mode((screen_width, screen_height))
 
         gun = True
         while gun:

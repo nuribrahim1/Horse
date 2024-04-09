@@ -1,4 +1,4 @@
-from Horse import *
+from Models import *
 from random import randint
 
 
@@ -8,10 +8,10 @@ print("Hello welcome to Super Stables")
 def newbet():
 
     h1 = horse(random.choice(nameList),randint(11,18),130,(255,0,0))
-    h2 = horse(nameList[randint(0,6)],randint(11,18),150,(10,10,10))
-    h3 = horse(nameList[randint(0,6)],randint(11,18),170,(0,0,255))
-    h4 = horse(nameList[randint(0,6)],randint(11,18),190,(255,165,0))
-    h5 = horse(nameList[randint(0,6)],randint(11,18),210,(238,130,238))
+    h2 = horse(random.choice(nameList),randint(11,18),150,(10,10,10))
+    h3 = horse(random.choice(nameList),randint(11,18),170,(0,0,255))
+    h4 = horse(random.choice(nameList),randint(11,18),190,(255,165,0))
+    h5 = horse(random.choice(nameList),randint(11,18),210,(238,130,238))
 
     print (f"The horses racing today are\n"
            f"1) {h1.name} Odds: {h1.odds}\n"
@@ -44,7 +44,7 @@ def newbet():
                 print("Invalid input")
         else:
             print("Invalid input")
-    choice  = 0
+    choice = 0
     chosing = True
     while chosing:
         choice  = input("Which horse would like to bet on (1-5)")
